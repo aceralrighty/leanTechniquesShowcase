@@ -1,5 +1,5 @@
 # takes in the amount from the user
-def user_amount():
+def take_in_amount():
     while True:
         try:
             amount = float(input("Enter a dollar amount: "))
@@ -83,7 +83,7 @@ def give_user_change(amount, ten_bill, five_bill, one_bill, dime, nickel, penny,
 
 # added this main because it was shadowing outer scope stuff
 def main():
-    amount = user_amount()
+    amount = take_in_amount()
     cents = convert_to_cents(amount)
     ten_bill, five_bill, one_bill, dime, nickel, penny, quarter = change_for_user(cents)
     give_user_change(amount, ten_bill, five_bill, one_bill, dime, nickel, penny, quarter)
